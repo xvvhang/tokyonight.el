@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Emacs](https://img.shields.io/badge/Emacs-24.3+-blue.svg)
-![License](https://img.shields.io/badge/License-GPL--3.0-green.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)
 
 **A clean, elegant Emacs theme inspired by the vibrant night skyline of Tokyo**
@@ -264,7 +264,7 @@ emacs --batch --eval "(progn
 
 ## 📄 License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
