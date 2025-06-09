@@ -56,7 +56,7 @@ A clean light theme for daytime use with excellent readability.
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/tokyo-night.el.git
+git clone https://github.com/xvvhang/tokyo-night.el.git
 ```
 
 2. Add to your Emacs configuration:
@@ -69,7 +69,7 @@ git clone https://github.com/yourusername/tokyo-night.el.git
 
 ```elisp
 (use-package tokyo-night-themes
-  :straight (:host github :repo "yourusername/tokyo-night.el")
+  :straight (:host github :repo "xvvhang/tokyo-night.el")
   :config
   (load-theme 'tokyo-night-night t))
 ```
@@ -79,7 +79,7 @@ git clone https://github.com/yourusername/tokyo-night.el.git
 Add to your `packages.el`:
 ```elisp
 (package! tokyo-night-themes
-  :recipe (:host github :repo "yourusername/tokyo-night.el"))
+  :recipe (:host github :repo "xvvhang/tokyo-night.el"))
 ```
 
 Then in your `config.el`:
@@ -251,7 +251,7 @@ Contributions are welcome! Here's how you can help:
 ### Development Setup
 
 ```bash
-git clone https://github.com/yourusername/tokyo-night.el.git
+git clone https://github.com/xvvhang/tokyo-night.el.git
 cd tokyo-night.el
 
 # Test themes
@@ -288,6 +288,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the Emacs community**
 
-[⭐ Star this repo](https://github.com/yourusername/tokyo-night.el) • [🐛 Report issues](https://github.com/yourusername/tokyo-night.el/issues) • [💡 Request features](https://github.com/yourusername/tokyo-night.el/discussions)
+[⭐ Star this repo](https://github.com/xvvhang/tokyo-night.el) • [🐛 Report issues](https://github.com/xvvhang/tokyo-night.el/issues) • [💡 Request features](https://github.com/xvvhang/tokyo-night.el/discussions)
 
 </div>

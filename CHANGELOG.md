@@ -34,4 +34,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive terminal color support (16 colors)
 - Git diff and status color integration
 
-[1.0.0]: https://github.com/yourusername/tokyo-night.el/releases/tag/v1.0.0
+[1.0.0]: https://github.com/xvvhang/tokyo-night.el/releases/tag/v1.0.0

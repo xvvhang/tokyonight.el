@@ -4,7 +4,7 @@
 
 ;; Author: Tokyo Night Themes Contributors
 ;; Maintainer: Tokyo Night Themes Contributors
-;; URL: https://github.com/yourusername/tokyo-night.el
+;; URL: https://github.com/xvvhang/tokyo-night.el
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))
 

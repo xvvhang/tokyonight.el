@@ -3,7 +3,7 @@
 ;; Copyright (C) 2025
 
 ;; Author: Tokyo Night Themes
-;; URL: https://github.com/tokyo-night-emacs/tokyo-night.el
+;; URL: https://github.com/xvvhang/tokyo-night.el
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: faces, themes
