@@ -23,6 +23,7 @@
 - 🔀 **Git integration**: Proper diff and status colors
 - ⚙️ **Customizable**: Easy color customization system
 - 📦 **Lightweight**: Pure Emacs Lisp with no dependencies
+- 🚀 **awesome-tray support**: Complete theming for the awesome-tray mode-line replacement
 
 ## 🎨 Theme Variants
 
@@ -96,6 +97,24 @@ Then in your `config.el`:
 (load-theme 'tokyo-night-moon t)    ; Soft variant
 (load-theme 'tokyo-night-day t)     ; Light variant
 ```
+
+## 📦 Supported Packages
+
+Tokyo Night themes provide beautiful styling for many popular Emacs packages:
+
+### Mode-line Replacements
+- **[awesome-tray](https://github.com/manateelazycat/awesome-tray)** - Complete face definitions for all modules including git, evil, org, battery, and more
+
+### Core Emacs
+- Font Lock (syntax highlighting)
+- Line numbers
+- Isearch
+- Org mode
+- Dired
+- Compilation buffers
+- And many more built-in faces
+
+*More package support is planned for future releases. Feel free to request support for your favorite packages!*
 
 ## ⚙️ Configuration
 
