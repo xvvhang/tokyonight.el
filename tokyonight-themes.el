@@ -1,11 +1,11 @@
-;;; tokyo-night-themes.el --- Elegant themes inspired by Tokyo Night -*- lexical-binding: t -*-
+;;; tokyonight-themes.el --- Elegant themes inspired by Tokyo Night -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2025
 
 ;; Author: Tokyo Night Themes Contributors
 ;; Maintainer: Tokyo Night Themes Contributors  
-;; URL: https://github.com/xvvhang/tokyo-night.el
-;; Version: 1.0.0
+;; URL: https://github.com/xvvhang/tokyonight.el
+;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Created: June 9, 2025
 ;; Keywords: themes faces
@@ -30,60 +30,60 @@
 ;; Original theme created by folke, see: https://github.com/folke/tokyonight.nvim
 ;;
 ;; This theme provides 4 variants:
-;; - tokyo-night-night: The classic dark theme
-;; - tokyo-night-storm: A darker variant with different blue tones  
-;; - tokyo-night-moon: A softer dark variant with muted colors
-;; - tokyo-night-day: A light variant for daytime use
+;; - tokyonight-night: The classic dark theme
+;; - tokyonight-storm: A darker variant with different blue tones  
+;; - tokyonight-moon: A softer dark variant with muted colors
+;; - tokyonight-day: A light variant for daytime use
 
 ;;; Code:
 
-(defgroup tokyo-night-themes nil
+(defgroup tokyonight-themes nil
   "Tokyo Night themes options."
   :group 'faces)
 
-(defcustom tokyo-night-themes-comment-italic t
+(defcustom tokyonight-themes-comment-italic t
   "Enable italics for comments and also disable background."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-keyword-italic t
+(defcustom tokyonight-themes-keyword-italic t
   "Enable italics for keywords."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-org-agenda-height t
+(defcustom tokyonight-themes-org-agenda-height t
   "Use varying text heights for org agenda."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-org-height t
+(defcustom tokyonight-themes-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-org-bold t
+(defcustom tokyonight-themes-org-bold t
   "Inherit text bold for org headings."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-org-priority-bold t
+(defcustom tokyonight-themes-org-priority-bold t
   "Inherit text bold for priority items in agenda view."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
-(defcustom tokyo-night-themes-org-highlight nil
+(defcustom tokyonight-themes-org-highlight nil
   "Highlight org headings."
   :type 'boolean
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
 ;;;###autoload
-(defcustom tokyo-night-themes-custom-colors '()
+(defcustom tokyonight-themes-custom-colors '()
   "Place to override default theme colors."
   :type 'list
-  :group 'tokyo-night-themes)
+  :group 'tokyonight-themes)
 
 (eval-when-compile
-  (defvar tokyo-night-themes-color-palette-list
+  (defvar tokyonight-themes-color-palette-list
     '(;; Base colors that will be defined per variant
       (bg nil)
       (bg-dark nil)
@@ -163,18 +163,18 @@
     "The tokyo night color palette list."))
 
 (eval-and-compile
-  (defun tokyo-night-themes--variant-colors-symbol (variant)
-    "Create symbol for color palette of tokyo-night-themes VARIANT."
-    (intern (format "tokyo-night-themes-%s-colors" (symbol-name variant)))))
+  (defun tokyonight-themes--variant-colors-symbol (variant)
+    "Create symbol for color palette of tokyonight-themes VARIANT."
+    (intern (format "tokyonight-themes-%s-colors" (symbol-name variant)))))
 
-(defmacro tokyo-night-themes--define-variant-colors (variant &rest body)
+(defmacro tokyonight-themes--define-variant-colors (variant &rest body)
   "Define color palette for a specific theme VARIANT via BODY."
   (declare (indent defun))
-  `(defvar ,(tokyo-night-themes--variant-colors-symbol variant)
-     (let ,tokyo-night-themes-color-palette-list ,@body)))
+  `(defvar ,(tokyonight-themes--variant-colors-symbol variant)
+     (let ,tokyonight-themes-color-palette-list ,@body)))
 
 ;; Night variant color palette
-(tokyo-night-themes--define-variant-colors night
+(tokyonight-themes--define-variant-colors night
   '(;; Tokyo Night Color Palette - Night Variant
    ;; Based on tokyonight.nvim Night variant
    (bg "#1a1b26")
@@ -254,7 +254,7 @@
    (diff-text "#394b70")))
 
 ;; Storm variant color palette (Commit 5)
-(tokyo-night-themes--define-variant-colors storm
+(tokyonight-themes--define-variant-colors storm
   '(;; Tokyo Night Color Palette - Storm Variant
    ;; Based on tokyonight.nvim Storm variant
    (bg "#24283b")
@@ -334,7 +334,7 @@
    (diff-text "#394b70")))
 
 ;; Moon variant (Commit 6)  
-(tokyo-night-themes--define-variant-colors moon
+(tokyonight-themes--define-variant-colors moon
   '(;; Tokyo Night Color Palette - Moon Variant
    ;; Based on tokyonight.nvim Moon variant
    (bg "#222436")
@@ -414,7 +414,7 @@
    (diff-text "#394b70")))
 
 ;; Day variant (Commit 7)
-(tokyo-night-themes--define-variant-colors day
+(tokyonight-themes--define-variant-colors day
   '(;; Tokyo Night Color Palette - Day Variant (Light Theme)
    ;; Based on tokyonight.nvim Day variant
    (bg "#e1e2e7")
@@ -495,7 +495,7 @@
 
 ;; These will be populated in subsequent commits
 
-(defmacro tokyo-night-themes--face-specs ()
+(defmacro tokyonight-themes--face-specs ()
   "Return a backquote which defines a list of face specs.
 
 It expects to be evaluated in a scope in which the various color
@@ -523,14 +523,14 @@ names to which it refers are bound."
       ;; Font lock faces (syntax highlighting)
       (font-lock-builtin-face (:foreground ,blue))
       (font-lock-comment-face (:foreground ,comment
-                               ,@(if tokyo-night-themes-comment-italic
+                               ,@(if tokyonight-themes-comment-italic
                                      '(:italic t) '())))
       (font-lock-comment-delimiter-face (:foreground ,comment))
       (font-lock-constant-face (:foreground ,orange))
       (font-lock-doc-face (:foreground ,comment))
       (font-lock-function-name-face (:foreground ,blue))
       (font-lock-keyword-face (:foreground ,purple
-                               ,@(if tokyo-night-themes-keyword-italic
+                               ,@(if tokyonight-themes-keyword-italic
                                      '(:italic t) '())))
       (font-lock-negation-char-face (:foreground ,red))
       (font-lock-number-face (:foreground ,orange))
@@ -692,13 +692,13 @@ names to which it refers are bound."
       
       ;; Org mode faces
       (org-level-1 (:foreground ,blue :weight bold 
-                    ,@(if tokyo-night-themes-org-height 
+                    ,@(if tokyonight-themes-org-height 
                           '(:height 1.3) '())))
       (org-level-2 (:foreground ,purple :weight bold
-                    ,@(if tokyo-night-themes-org-height 
+                    ,@(if tokyonight-themes-org-height 
                           '(:height 1.2) '())))
       (org-level-3 (:foreground ,orange :weight bold
-                    ,@(if tokyo-night-themes-org-height 
+                    ,@(if tokyonight-themes-org-height 
                           '(:height 1.1) '())))
       (org-level-4 (:foreground ,green))
       (org-level-5 (:foreground ,cyan))
@@ -706,7 +706,7 @@ names to which it refers are bound."
       (org-level-7 (:foreground ,red))
       (org-level-8 (:foreground ,magenta))
       (org-document-title (:foreground ,blue :weight bold
-                           ,@(if tokyo-night-themes-org-height 
+                           ,@(if tokyonight-themes-org-height 
                                  '(:height 1.5) '())))
       (org-document-info (:foreground ,cyan))
       (org-document-info-keyword (:foreground ,comment))
@@ -784,32 +784,32 @@ names to which it refers are bound."
       (awesome-tray-module-flymake-note (:inherit awesome-tray-blue-bright-face))
       )))
 
-(defmacro tokyo-night-themes--with-variant-colors (variant &rest body)
+(defmacro tokyonight-themes--with-variant-colors (variant &rest body)
   "Execute BODY with the color palette of a specified theme VARIANT."
   (declare (indent defun))
-  `(let ,(append (symbol-value (tokyo-night-themes--variant-colors-symbol variant))
-                 tokyo-night-themes-custom-colors)
+  `(let ,(append (symbol-value (tokyonight-themes--variant-colors-symbol variant))
+                 tokyonight-themes-custom-colors)
      ,@body))
 
-(defmacro tokyo-night-themes--define-theme (theme-name variant)
-  "Define theme THEME-NAME for the tokyo-night-themes VARIANT."
+(defmacro tokyonight-themes--define-theme (theme-name variant)
+  "Define theme THEME-NAME for the tokyonight-themes VARIANT."
   (let ((doc (format "The Tokyo Night %s theme" variant)))
     `(progn
-       (tokyo-night-themes--with-variant-colors
+       (tokyonight-themes--with-variant-colors
          ,variant
          (apply 'custom-theme-set-faces ',theme-name
-                (tokyo-night-themes--face-specs))))))
+                (tokyonight-themes--face-specs))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'tokyo-night-themes)
+(provide 'tokyonight-themes)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
 
-;;; tokyo-night-themes.el ends here
+;;; tokyonight-themes.el ends here

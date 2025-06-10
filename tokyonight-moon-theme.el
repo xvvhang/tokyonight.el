@@ -1,11 +1,11 @@
-;;; tokyo-night-day-theme.el --- Tokyo Night Day theme -*- lexical-binding: t -*-
+;;; tokyonight-moon-theme.el --- Tokyo Night Moon theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2025
 
 ;; Author: Tokyo Night Themes Contributors
 ;; Maintainer: Tokyo Night Themes Contributors
-;; URL: https://github.com/xvvhang/tokyo-night.el
-;; Version: 1.0.0
+;; URL: https://github.com/xvvhang/tokyonight.el
+;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -23,22 +23,22 @@
 
 ;;; Commentary:
 
-;; Tokyo Night Day is the light variant of the Tokyo Night theme family.
-;; This theme provides excellent readability during daytime use with
-;; a clean light background and vibrant colors that maintain the Tokyo
-;; Night aesthetic while being easier on the eyes in bright environments.
+;; Tokyo Night Moon is a softer variant of the Tokyo Night theme with
+;; muted colors and a warmer feel. This theme features a slightly
+;; lighter background with gentle purple tones, perfect for users
+;; who prefer a less contrasted dark theme with a calming atmosphere.
 
 ;;; Code:
 
-(require 'tokyo-night-themes)
+(require 'tokyonight-themes)
 
 ;;;###autoload
-(deftheme tokyo-night-day
-  "Tokyo Night Day - A light variant for daytime use.
-Based on the Day variant from tokyonight.nvim by folke.")
+(deftheme tokyonight-moon
+  "Tokyo Night Moon - A softer variant with muted colors.
+Based on the Moon variant from tokyonight.nvim by folke.")
 
-(tokyo-night-themes--define-theme tokyo-night-day day)
+(tokyonight-themes--define-theme tokyonight-moon moon)
 
-(provide-theme 'tokyo-night-day)
+(provide-theme 'tokyonight-moon)
 
-;;; tokyo-night-day-theme.el ends here
+;;; tokyonight-moon-theme.el ends here

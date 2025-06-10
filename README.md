@@ -4,7 +4,7 @@
 
 ![Emacs](https://img.shields.io/badge/Emacs-24.3+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)
+![Version](https://img.shields.io/badge/Version-2.0.0-orange.svg)
 
 **A clean, elegant Emacs theme inspired by the vibrant night skyline of Tokyo**
 
@@ -30,25 +30,25 @@
 ### 🌙 Night (Dark)
 The classic dark theme with deep blue backgrounds and vibrant syntax highlighting.
 ```elisp
-(load-theme 'tokyo-night-night t)
+(load-theme 'tokyonight-night t)
 ```
 
 ### ⛈️ Storm (Darker)
 A darker variant with deeper blue tones, perfect for low-light environments.
 ```elisp
-(load-theme 'tokyo-night-storm t)
+(load-theme 'tokyonight-storm t)
 ```
 
 ### 🌕 Moon (Soft Dark)
 A softer dark variant with muted colors and warmer purple tones.
 ```elisp
-(load-theme 'tokyo-night-moon t)
+(load-theme 'tokyonight-moon t)
 ```
 
 ### ☀️ Day (Light)
 A clean light theme for daytime use with excellent readability.
 ```elisp
-(load-theme 'tokyo-night-day t)
+(load-theme 'tokyonight-day t)
 ```
 
 ## 📦 Installation
@@ -57,45 +57,45 @@ A clean light theme for daytime use with excellent readability.
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/xvvhang/tokyo-night.el.git
+git clone https://github.com/xvvhang/tokyonight.el.git
 ```
 
 2. Add to your Emacs configuration:
 ```elisp
-(add-to-list 'custom-theme-load-path "/path/to/tokyo-night.el/")
-(load-theme 'tokyo-night-night t)  ; or storm, moon, day
+(add-to-list 'custom-theme-load-path "/path/to/tokyonight.el/")
+(load-theme 'tokyonight-night t)  ; or storm, moon, day
 ```
 
 ### Method 2: use-package + straight.el
 
 ```elisp
-(use-package tokyo-night-themes
-  :straight (:host github :repo "xvvhang/tokyo-night.el")
+(use-package tokyonight-themes
+  :straight (:host github :repo "xvvhang/tokyonight.el")
   :config
-  (load-theme 'tokyo-night-night t))
+  (load-theme 'tokyonight-night t))
 ```
 
 ### Method 3: Doom Emacs
 
 Add to your `packages.el`:
 ```elisp
-(package! tokyo-night-themes
-  :recipe (:host github :repo "xvvhang/tokyo-night.el"))
+(package! tokyonight-themes
+  :recipe (:host github :repo "xvvhang/tokyonight.el"))
 ```
 
 Then in your `config.el`:
 ```elisp
-(setq doom-theme 'tokyo-night-night)
+(setq doom-theme 'tokyonight-night)
 ```
 
 ## 🚀 Quick Start
 
 ```elisp
 ;; Load your preferred variant
-(load-theme 'tokyo-night-night t)   ; Classic dark
-(load-theme 'tokyo-night-storm t)   ; Darker variant
-(load-theme 'tokyo-night-moon t)    ; Soft variant
-(load-theme 'tokyo-night-day t)     ; Light variant
+(load-theme 'tokyonight-night t)   ; Classic dark
+(load-theme 'tokyonight-storm t)   ; Darker variant
+(load-theme 'tokyonight-moon t)    ; Soft variant
+(load-theme 'tokyonight-day t)     ; Light variant
 ```
 
 ## 📦 Supported Packages
@@ -122,16 +122,16 @@ Tokyo Night themes provide beautiful styling for many popular Emacs packages:
 
 ```elisp
 ;; Enable italic comments (default: t)
-(setq tokyo-night-themes-comment-italic t)
+(setq tokyonight-themes-comment-italic t)
 
 ;; Enable italic keywords (default: t)
-(setq tokyo-night-themes-keyword-italic t)
+(setq tokyonight-themes-keyword-italic t)
 
 ;; Enable org-mode height scaling (default: t)
-(setq tokyo-night-themes-org-height t)
+(setq tokyonight-themes-org-height t)
 
 ;; Enable org-mode bold headings (default: t)
-(setq tokyo-night-themes-org-bold t)
+(setq tokyonight-themes-org-bold t)
 ```
 
 ### Custom Colors
@@ -139,14 +139,14 @@ Tokyo Night themes provide beautiful styling for many popular Emacs packages:
 You can override any color in the palette:
 
 ```elisp
-(setq tokyo-night-themes-custom-colors
+(setq tokyonight-themes-custom-colors
       '((bg "#1a1b26")           ; Custom background
         (fg "#c0caf5")           ; Custom foreground
         (blue "#7aa2f7")         ; Custom blue
         (green "#9ece6a")))      ; Custom green
 
 ;; Apply after setting custom colors
-(load-theme 'tokyo-night-night t)
+(load-theme 'tokyonight-night t)
 ```
 
 ### Complete Color Palette
@@ -209,17 +209,17 @@ Tokyo Night themes provide excellent support for popular Emacs packages:
 ### Theme Switching Function
 
 ```elisp
-(defun my/cycle-tokyo-night-themes ()
+(defun my/cycle-tokyonight-themes ()
   "Cycle through Tokyo Night theme variants."
   (interactive)
-  (let* ((themes '(tokyo-night-night tokyo-night-storm 
-                   tokyo-night-moon tokyo-night-day))
+  (let* ((themes '(tokyonight-night tokyonight-storm 
+                   tokyonight-moon tokyonight-day))
          (current (car custom-enabled-themes))
          (next (or (cadr (member current themes))
                    (car themes))))
     (load-theme next t)))
 
-(global-set-key (kbd "C-c t") #'my/cycle-tokyo-night-themes)
+(global-set-key (kbd "C-c t") #'my/cycle-tokyonight-themes)
 ```
 
 ### Time-based Theme Switching
@@ -229,8 +229,8 @@ Tokyo Night themes provide excellent support for popular Emacs packages:
   "Load theme based on time of day."
   (let ((hour (string-to-number (format-time-string "%H"))))
     (if (and (>= hour 6) (< hour 18))
-        (load-theme 'tokyo-night-day t)
-      (load-theme 'tokyo-night-night t))))
+        (load-theme 'tokyonight-day t)
+      (load-theme 'tokyonight-night t))))
 
 ;; Load appropriate theme on startup
 (my/load-theme-by-time)
@@ -245,8 +245,8 @@ Tokyo Night themes provide excellent support for popular Emacs packages:
   (let ((appearance (shell-command-to-string 
                      "defaults read -g AppleInterfaceStyle 2>/dev/null")))
     (if (string-match "Dark" appearance)
-        (load-theme 'tokyo-night-night t)
-      (load-theme 'tokyo-night-day t))))
+        (load-theme 'tokyonight-night t)
+      (load-theme 'tokyonight-day t))))
 ```
 
 ## 🎨 Color Philosophy
@@ -270,14 +270,14 @@ Contributions are welcome! Here's how you can help:
 ### Development Setup
 
 ```bash
-git clone https://github.com/xvvhang/tokyo-night.el.git
-cd tokyo-night.el
+git clone https://github.com/xvvhang/tokyonight.el.git
+cd tokyonight.el
 
 # Test themes
 emacs --batch --eval "(progn 
   (add-to-list 'load-path \".\") 
-  (load \"tokyo-night-themes\") 
-  (load \"tokyo-night-night-theme\")
+  (load \"tokyonight-themes\") 
+  (load \"tokyonight-night-theme\")
   (message \"Theme loaded successfully\"))"
 ```
 
@@ -293,7 +293,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Comparison with Original
 
-| Feature | tokyonight.nvim | tokyo-night.el |
+| Feature | tokyonight.nvim | tokyonight.el |
 |---------|----------------|----------------|
 | Variants | 4 (night, storm, moon, day) | ✅ 4 (night, storm, moon, day) |
 | Color Accuracy | Original | ✅ 100% Faithful |
@@ -307,6 +307,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the Emacs community**
 
-[⭐ Star this repo](https://github.com/xvvhang/tokyo-night.el) • [🐛 Report issues](https://github.com/xvvhang/tokyo-night.el/issues) • [💡 Request features](https://github.com/xvvhang/tokyo-night.el/discussions)
+[⭐ Star this repo](https://github.com/xvvhang/tokyonight.el) • [🐛 Report issues](https://github.com/xvvhang/tokyonight.el/issues) • [💡 Request features](https://github.com/xvvhang/tokyonight.el/discussions)
 
 </div>

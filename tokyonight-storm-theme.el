@@ -1,11 +1,11 @@
-;;; tokyo-night-storm-theme.el --- Tokyo Night Storm theme -*- lexical-binding: t -*-
+;;; tokyonight-storm-theme.el --- Tokyo Night Storm theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2025
 
 ;; Author: Tokyo Night Themes Contributors
 ;; Maintainer: Tokyo Night Themes Contributors
-;; URL: https://github.com/xvvhang/tokyo-night.el
-;; Version: 1.0.0
+;; URL: https://github.com/xvvhang/tokyonight.el
+;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -31,15 +31,15 @@
 
 ;;; Code:
 
-(require 'tokyo-night-themes)
+(require 'tokyonight-themes)
 
 ;;;###autoload
-(deftheme tokyo-night-storm
+(deftheme tokyonight-storm
   "Tokyo Night Storm - A darker variant with deeper blue tones.
 Based on the Storm variant from tokyonight.nvim by folke.")
 
-(tokyo-night-themes--define-theme tokyo-night-storm storm)
+(tokyonight-themes--define-theme tokyonight-storm storm)
 
-(provide-theme 'tokyo-night-storm)
+(provide-theme 'tokyonight-storm)
 
-;;; tokyo-night-storm-theme.el ends here
+;;; tokyonight-storm-theme.el ends here

@@ -5,6 +5,27 @@ All notable changes to Tokyo Night Themes for Emacs will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2025-06-10
+
+### Changed
+- **BREAKING: Renamed theme files and functions** - Simplified naming convention
+  - Theme files: `tokyo-night-*-theme.el` → `tokyonight-*-theme.el`
+  - Theme names: `tokyo-night-night` → `tokyonight-night` (and similar for all variants)
+  - Framework file: `tokyo-night-themes.el` → `tokyonight-themes.el`
+  - Function names: `tokyo-night-themes--*` → `tokyonight-themes--*`
+  - Package name: `tokyo-night-themes` → `tokyonight-themes`
+  - Repository URL: `tokyo-night.el` → `tokyonight.el`
+
+### Migration Guide
+Users need to update their configuration:
+```elisp
+;; Old (v1.x)
+(load-theme 'tokyo-night-night t)
+
+;; New (v2.x)
+(load-theme 'tokyonight-night t)
+```
+
 ## [1.0.1] - 2025-06-09
 
 ### Added
@@ -43,5 +64,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive terminal color support (16 colors)
 - Git diff and status color integration
 
-[1.0.1]: https://github.com/xvvhang/tokyo-night.el/releases/tag/v1.0.1
-[1.0.0]: https://github.com/xvvhang/tokyo-night.el/releases/tag/v1.0.0
+[2.0.0]: https://github.com/xvvhang/tokyonight.el/releases/tag/v2.0.0
+[1.0.1]: https://github.com/xvvhang/tokyonight.el/releases/tag/v1.0.1
+[1.0.0]: https://github.com/xvvhang/tokyonight.el/releases/tag/v1.0.0

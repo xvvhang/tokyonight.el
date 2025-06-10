@@ -1,10 +1,10 @@
-;;; tokyo-night-night-theme.el --- Tokyo Night theme for Emacs - Night variant
+;;; tokyonight-night-theme.el --- Tokyo Night theme for Emacs - Night variant
 
 ;; Copyright (C) 2025
 
 ;; Author: Tokyo Night Themes
-;; URL: https://github.com/xvvhang/tokyo-night.el
-;; Version: 1.0.0
+;; URL: https://github.com/xvvhang/tokyonight.el
+;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: faces, themes
 
@@ -33,20 +33,20 @@
 ;; that's easy on the eyes during long coding sessions.
 ;;
 ;; To use this theme, load it with:
-;;   (load-theme 'tokyo-night-night t)
+;;   (load-theme 'tokyonight-night t)
 
 ;;; Code:
 
-(require 'tokyo-night-themes)
+(require 'tokyonight-themes)
 
 ;;;###autoload
-(deftheme tokyo-night-night
+(deftheme tokyonight-night
   "Tokyo Night - The classic dark theme.
 Based on the Night variant from tokyonight.nvim by folke.")
 
-;; Define the tokyo-night-night theme using the macro from tokyo-night-themes
-(tokyo-night-themes--define-theme tokyo-night-night night)
+;; Define the tokyonight-night theme using the macro from tokyonight-themes
+(tokyonight-themes--define-theme tokyonight-night night)
 
-(provide-theme 'tokyo-night-night)
+(provide-theme 'tokyonight-night)
 
-;;; tokyo-night-night-theme.el ends here
+;;; tokyonight-night-theme.el ends here
